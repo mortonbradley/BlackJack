@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+	background-color: #35654d;
+}
+
+#dealer-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+
+#your-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+
+#hit {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#stay {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#Play-Hand {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#results {
+    color: #eadf46;
+	font-size: 1.5em;
+    }
+	
+#balance-container {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    text-align: center;
+	color: #eadf46;
+}
+
+#balance-text {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px; 
+	margin-top: 100px;
+	margin-right: 50px;
+	color: #eadf4;
+}
+
+#balance-display {
+    font-size: 16px;
+    border: 1px solid #35654d; 
+    padding: 5px; 
+	background-color: #35654d;
+}
+
+#current-container {
+    position: fixed;
+    top: 100px;
+    right: 17px;
+    text-align: center;
+	color: #eadf46;
+}
+
+#current-text {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px; 
+	margin-top: 100px;
+	margin-right: 50px;
+	color: #eadf4;
+}
+
+#bet-amount {
+    font-size: 16px;
+    border: 1px #35654d; 
+    padding: 2px; 
+	background-color: #35654d;
+	padding-right: 30px;
+}
+
+#age-verification-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: #eadf4;
+}
+
+#dob {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+	color: #eadf4;
+}
+
+#verify-btn {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+	color: #eadf4;
+}
+
+#verify-btn:hover {
+    background-color: #0056b3; 
+}
+
+h1 {
+	color: #eadf46;
+	border-style: solid;
+	border-spacing: 10px;
+}
+
+h2 {
+	color: #eadf46;
+	display: block;
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+h3 {
+	color: #eadf46;
+}
+
+.chips {
+    
+    margin-top: 20px;
+	text-align: center;
+}
+
+.chip {
+    width: 75px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; 
+	margin: 20px;
+}
+
+.chip:hover {
+    transform: scale(1.1); 
+}
