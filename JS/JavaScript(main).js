@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Check if the user is over 18 years old
         if (age >= 18) {
             // Redirect to the page for users over 18
-            window.location.href="BlackJack/HTML/Betting-BJ.html";
+            window.location.href="./HTML/Betting-BJ.html";
         } else {
             // Redirect to the page for users under 18
-            window.location.href="BlackJack/HTML/Non-betting BJ.html";
+            window.location.href="./HTML/Non-betting BJ.html";
         }
     });
 });
