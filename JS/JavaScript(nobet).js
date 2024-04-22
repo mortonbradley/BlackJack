@@ -69,14 +69,14 @@ function startGame() {
     // Display one face-up card for the dealer
     let faceUpCardImg = document.createElement("img");
     let faceUpCard = deck.pop();
-    faceUpCardImg.src = "BlackJack/Images/" + faceUpCard + ".png";
+    faceUpCardImg.src = "./Images/" + faceUpCard + ".png";
     document.getElementById("dealer-cards").append(faceUpCardImg);
 
     // Deal two cards for the player
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "BlackJack/Images/" + card + ".png";
+        cardImg.src = "./Images/" + card + ".png";
         yourSum += getValue(card);
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
@@ -93,7 +93,7 @@ function hit() {
 
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "BlackJack/Images/" + card + ".png";
+    cardImg.src = "./Images/" + card + ".png";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
@@ -106,7 +106,7 @@ function hit() {
 
 function stay() {
     // Reveal the hidden card
-    document.getElementById("hidden").src = "BlackJack/Images/" + hidden + ".png";
+    document.getElementById("hidden").src = "./Images/" + hidden + ".png";
 
     // Dealer hits until their total is at least 17
     while (dealerSum < 17) {
