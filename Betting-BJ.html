@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="./CSS/CSS.css">
+        <script src="./JS/JavaScript.js"></script>
+    </head>
+
+    <body>
+		
+		<h1> Welcome to Black Jack </h1>
+		<br>
+        <h2>Dealer: <span id="dealer-sum"></span></h2>
+        <div id="dealer-cards">
+            <img id="hidden" src="./Images/BACK.png">
+        </div>
+		
+		<div id="balance-container">
+		<div id="balance-text">Balance:</div>
+		<div id="balance-display">1000</div>
+		</div>
+		
+		<div id="current-container">
+		<div id= "current-text">Current Bet:</div>
+		<div id="bet-amount">0</div>
+		</div>
+
+        <h2>You: <span id="your-sum"></span></h2>
+        <div id="your-cards"></div>
+        <br>
+        <button id="hit">Hit</button>
+        <button id="stay">Stay</button>
+        <p id="results"></p>
+			
+		<div class="chips">
+        <img class="chip" id="chip5" src="./Poker_Chips/Chip_5.jpg" alt="Chip 1">
+        <img class="chip" id="chip10" src="./Poker_Chips/Chip_10.jpg" alt="Chip 2">
+        <img class="chip" id="chip25" src="./Poker_Chips/Chip_25.jpg" alt="Chip 3">
+        <img class="chip" id="chip50" src="./Poker_Chips/Chip_50.jpg" alt="Chip 4">
+        <img class="chip" id="chip100" src="./Poker_Chips/Chip_100.jpg" alt="Chip 5">
+		
+		<br>
+		<br>
+		
+		<button id="Play-Hand">Play hand</button>
+		
+		<h3 id="instructions">Welcome to my BlackJack game, to start you must make a bet (Minumum of £5) to do this please click on the corrisponding chip, then once you have made your bet just press "Play Hand" and the game will start. Once the game has finished the page will refresh automatically. Good Luck!</h3>
+		
+    </div>
+    </body>
+</html>
