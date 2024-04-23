@@ -79,7 +79,7 @@ function playHand() {
         alert("Minimum bet is £5. Please place a higher bet to play the hand.");
         return;
     }
-
+document.getElementById("Play-Hand").disabled = true;
     // Disable betting
     disableBetting();
 
