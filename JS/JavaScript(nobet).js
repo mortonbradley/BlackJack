@@ -16,15 +16,14 @@ window.onload = function() {
 }
 
 function playHand() {
-    // Disable betting
+    
     disableBetting();
-
-    // Build and shuffle the deck, start the game
+   
     buildDeck();
     shuffleDeck();
     startGame();
 
-    // Display dealer and player cards, enable hit and stay buttons, hide instructions
+    
     document.getElementById("dealer-cards").style.display = "block";
     document.getElementById("your-cards").style.display = "block";
     document.getElementById("hit").disabled = false;
@@ -33,7 +32,7 @@ function playHand() {
 }
 
 function disableBetting() {
-    // Disable all chip buttons (if any)
+    
     let chips = document.getElementsByClassName("chip");
     for (let i = 0; i < chips.length; i++) {
         chips[i].disabled = true;
@@ -47,7 +46,7 @@ function buildDeck() {
 
     for (let i = 0; i < types.length; i++) {
         for (let j = 0; j < values.length; j++) {
-            deck.push(values[j] + "-" + types[i]); //A-C -> K-C, A-D -> K-D
+            deck.push(values[j] + "-" + types[i]); 
         }
     }
 }
@@ -62,17 +61,17 @@ function shuffleDeck() {
 }
 
 function startGame() {
-    hidden = deck.pop(); // Store the hidden card
+    hidden = deck.pop(); 
     dealerSum += getValue(hidden);
     dealerAceCount += checkAce(hidden);
 
-    // Display one face-up card for the dealer
+    
     let faceUpCardImg = document.createElement("img");
     let faceUpCard = deck.pop();
     faceUpCardImg.src = "./Images/" + faceUpCard + ".png";
     document.getElementById("dealer-cards").append(faceUpCardImg);
 
-    // Deal two cards for the player
+   
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
@@ -105,10 +104,10 @@ function hit() {
 }
 
 function stay() {
-    // Reveal the hidden card
+    
     document.getElementById("hidden").src = "./Images/" + hidden + ".png";
 
-    // Dealer hits until their total is at least 17
+    
     while (dealerSum < 17) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
@@ -117,11 +116,11 @@ function stay() {
         dealerAceCount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
 
-        // Reduce dealerSum if needed
+        
         dealerSum = reduceAce(dealerSum, dealerAceCount);
     }
 
-    // Determine the winner
+   
     let message = "";
     if (yourSum > 21) {
         message = "You Lose!";
@@ -133,16 +132,16 @@ function stay() {
         message = "You Lose!";
     }
 
-    // Update UI with results
+   
     document.getElementById("results").innerText = message;
     document.getElementById("dealer-sum").innerText = dealerSum;
     document.getElementById("your-sum").innerText = yourSum;
 
-    // Disable hit and stay buttons
+    
     document.getElementById("hit").disabled = true;
     document.getElementById("stay").disabled = true;
 
-    // Reset the game after 5 seconds
+    
     setTimeout(resetGame, 5000);
 }
 
@@ -175,6 +174,6 @@ function reduceAce(playerSum, playerAceCount) {
 }
 
 function resetGame() {
-    // Reload the page
+    
     location.reload();
 }
